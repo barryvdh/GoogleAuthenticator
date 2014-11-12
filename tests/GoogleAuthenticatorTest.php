@@ -34,7 +34,7 @@ class HandlerTest extends \PHPUnit_Framework_TestCase
     {
         $url = $this->helper->getUrl('foo', 'foobar.org', '3DHTQX4GCRKHGS55CJ');
 
-        $expected = "https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=otpauth://totp/foo@foobar.org%3Fsecret%3D3DHTQX4GCRKHGS55CJ";
+        $expected = "https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=otpauth%3A%2F%2Ftotp%2Ffoo%3Fissuer%3Dfoobar.org%26secret%3D3DHTQX4GCRKHGS55CJ";
 
         $this->assertEquals($expected, $url);
     }
